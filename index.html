@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto Flor Aquino</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="menu-item"><a href="#">Productos</a></li>
+            <li class="menu-item-carro">
+                <a href="#irAlCarrito" class="carro-Padre">
+                    <img src="img/carro.png" class="carro" alt="">
+                    <div  id="carro-NumProductos"> 0</div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+    <!-- Seccion PRODUCTOS -->
+        <div class="row">
+            <div class="col-sm-12">
+            <h2 class="tituloProductos">Productos</h2>
+            </div>
+            <!-- Aca se agregan los productos por medio de un append -->
+            <div id="app" class="col-sm-12 row"></div>
+        </div>
+
+        <!-- este mensaje aparece solo cuando se agrega un producto al carrito -->
+        <div class="alert-productoAgregado" style="display: none;">
+           <div style="display: inline;"> El producto fue agregado correctamente<button class="btn buttonCerrar" type="button">X</button></div>
+        </div>
+
+    <!-- Seccion CARRITO -->
+        <div class="row">
+            <aside class="col-sm-12">
+                <h2 class="titulo2" id="irAlCarrito">Carrito</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="carrito-encabezado">
+                            <h6>Producto</h6>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="carrito-encabezado">
+                            <h6>Precio x unidad</h6>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="carrito-encabezado">
+                            <h6>Cantidad</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- Se van agregan productos al carrito carrito -->
+                <ul id="carrito" class="list-group">
+                     <!-- Si no hay productos aparece este texto -->
+                    <p class="carrito-vacio">No hay productos en el carrito</p>
+                </ul>
+               
+                <!-- Se definel el total -->
+                <p class="text-right" id="carrito-total">Costo total $ 0</p>
+
+                
+                <div class="row">
+                    <!-- se aprieta el boton de comprar aparece el mensaje -->
+                    <div class="col-6">
+                        <div class="mensajeFinalizarCompra" style="display: none;">Para finalizar ingrese los datos solicitados <img src="img/abajo.png" class="carro" alt=""></div>
+                    </div>
+                    <!-- Si hay productos en el carrito se muestran los botones de comprar/vaciar -->
+                    <div class="col-6 botones-Comprar-Vaciar"  style="display: none;">
+                        <button id="boton-vaciar" class="btn btn-danger ">Vaciar carrito</button>
+                        <button id="boton-comprar" class="btn btn-success ml-auto" >Comprar</button>
+                    </div>    
+                </div>
+                
+
+    <!-- Seccion FINALIZAR COMPRA que aparece solo cuando se aprieta el boton comprar -->   
+                
+                <div class="formularioCompra" style="display: none;">
+                    <div class="col-sm-12">
+                        <h2 >Finalizar compra</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 formularioFinal">
+                            <div>Nompre: <br> Correo electronico: <br>Direccion particular: </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div><input type="text" name="nombre" id="nombre" class="nombre" value=""> <br>
+                                <input type="text" name="correo" id="correo" class="correo" value=""> <br>
+                                <input type="text" name="direccion" id="direccion" class="direccion" value=""> <br>
+                                <p class="errorDatos" style="display: none;">Por favor ingrese todos los datos solicitados</p>
+                            </div> 
+                            <input type="button" id="finalizarCompra" class="btn btn-danger" value="Finalizar compra">
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>      
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="module" src="js/app.js"></script>
+
+</body>
+</html>

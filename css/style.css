@@ -1,0 +1,296 @@
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+  }
+
+body {
+	font-family: 'Open Sans', sans-serif;	
+  }
+
+nav {
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+	background:rgb(107, 0, 107);
+	padding: 5px 20px;
+	justify-items: end;
+	font-family: 'Sacramento', cursive;
+}
+
+ul {
+	list-style-type: text;	
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	background-color: rgb(255, 251, 0);
+	border-radius: 10px;
+	color: rgb(107, 0, 107);
+	padding: 10px;
+}
+
+.logo a:hover {
+	text-decoration: none;
+}
+
+.menu li {
+	font-size: 30px;
+	padding: 15px 30px;
+	display: inline-block;	
+}
+
+.menu {
+	display: flex;  flex-direction: row; 
+	justify-content: flex-end;
+	align-items: baseline;
+	margin: 0px!important;
+}
+
+/* icono del carro en nav bar*/
+.carro{
+	height: 35px;
+	width: 35px; 
+	justify-self: end;
+}
+
+
+.row{
+	margin: 0px!important;
+}
+
+header {
+	width: 100%;
+}
+
+/* titulos */
+h2{
+	font-family: 'Sacramento', cursive;
+	margin: 15px;
+	font-size:40px;
+	background-color: rgb(255, 251, 0);
+	color: rgb(107, 0, 107);
+	text-align: center;
+}
+
+
+.tituloProductos{
+	margin-top: 120px;
+}
+
+.borde-producto{
+	size: 1px;
+	background-color:rgb(107, 0, 107);
+}
+
+.cart-titulo{
+	background-color: rgb(107, 0, 107) ;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.img-fluid{
+	height: 300px;
+	width: 100%;
+}
+
+.cart-precio{
+	font-size: 25px;
+	text-align: center;
+	color: rgb(107, 0, 107);;
+	padding: 30px;
+}
+
+.btn-primary{
+	color:  rgb(107, 0, 107);
+}
+
+
+.carrito-encabezado {
+	display: flex; flex-direction: row;
+	align-self: center;
+	font-family: 'Open Sans', sans-serif;
+	background-color:  rgb(107, 0, 107);
+	padding-top: 10px;
+	padding-left: 5px;
+	color: white
+}
+  
+.carritoProductoImagen {
+	max-width: 80px;
+}
+  
+.carritoProductoCantidad { 
+ 	max-width: 50px; 
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: #eee;
+	padding-left: 10px;
+}
+  
+
+
+.carritoProductoPrecio{
+	padding-left: 10px;
+}
+
+#TodosLosProductos{
+	background-color: white;
+}
+
+
+
+.titulo2{
+	margin-top: 40px;
+}
+
+#app{
+	font-family: 'Open Sans', sans-serif;
+	background-color: white;
+}
+
+
+#carrito{
+	font-family: 'Open Sans', sans-serif;
+}
+
+li{
+	list-style: none;
+	padding: 10px;
+}
+
+form{
+	margin-left: 20px;
+	text-align: center;
+}
+
+.padre-flex {
+	display: flex;  flex-direction: row; 
+	justify-content: space-evenly;
+}
+ 
+
+.text-right{
+	background-color: white;
+	padding: 15px;
+}
+
+#carro-NumProductos{
+    position: absolute;
+    top: 55%;
+	 background-color:rgb(255, 251, 0);
+	 color: rgb(0, 0, 0);
+	 font: weight;
+	 font-family: 'Open Sans', sans-serif;
+	 font-weight:700;
+	 font-size: 15px;
+	 border-radius: 500px;
+	 padding:  0px 8px;
+}
+
+#carrito-total{
+	margin-top:10px ;
+	margin: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	font-size: 20px;
+	background-color:  rgb(107, 0, 107);
+
+	color: white
+} 
+
+.botones-Comprar-Vaciar{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	font-size: 30px;
+	text-align: right;
+	margin-bottom: 20px;
+	
+}
+
+.mensajeFinalizarCompra{
+
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	font-size: 18px;
+	margin-top: 15px;
+	
+}
+
+/* alerta que sale cuando se agrega un producto */
+.alert-productoAgregado{
+	background-color:white; 
+	color: rgb(107, 0, 107);
+	border-color: rgb(107, 0, 107);
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	font-size: 12px;
+	left: 75%;
+	bottom: 76%;
+
+	position: fixed;
+	z-index: 5000;
+	padding: 5px 15px; 
+	border-style: solid;
+	border-radius: 20px;
+}
+
+/* boton de cerrar el alert de "se agrego un nuevo producto" */
+.buttonCerrar{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	font-size: 12px;
+	color: rgb(226, 1, 1);
+}
+
+/* mensaje que aparece cuando el carro esta vacio*/
+.carrito-vacio{
+	display: flex;  flex-direction: row; 
+	justify-content: center;
+	margin: 10px;
+}
+
+
+.formularioFinal{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	display: flex;  flex-direction: row; 
+	justify-content: flex-end;
+}
+
+/* mensaje de que no se ingresaron todos los datos*/
+.errorDatos{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:700;
+	font-size: 12px;
+	color:rgb(107, 0, 107);
+
+}
+
+
+#finalizarCompra{
+	width: 200px;
+	margin-bottom: 30px;
+}
+
+.boton-agregarProductos{
+	font-family: 'Open Sans', sans-serif;
+	background-color:rgb(255, 251, 0)!important;
+	color:rgb(107, 0, 107)!important;
+	border: 1px;
+	
+
+}
+.boton-agregarProductos:hover{
+	background-color:rgb(107, 0, 107);
+	color: white;
+
+}
+
